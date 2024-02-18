@@ -1,47 +1,79 @@
 [
-    {
-      "title": "zapato",
-      "description": "color negro",
-      "price": 25,
-      "thumbnail": "https://las_fotos.com/zapato.jpg",
-      "code": "z-n",
-      "stock": 10,
-      "id": 1
-    },
-    {
-      "title": "pantalón",
-      "description": "color azul",
-      "price": 125,
-      "thumbnail": "https://las_fotos.com/pantalon.jpg",
-      "code": "p-a",
-      "stock": 23,
-      "id": 2
-    },
-    {
-      "title": "remera",
-      "description": "color negro",
-      "price": 29,
-      "thumbnail": "https://las_fotos.com/remera.jpg",
-      "code": "r-n",
-      "stock": 8,
-      "id": 3
-    },
-    {
-      "title": "camisa",
-      "description": "color azul",
-      "price": 95,
-      "thumbnail": "https://las_fotos.com/camisa.jpg",
-      "code": "c-a",
-      "stock": 56,
-      "id": 4
-    },
-      {
-          "title": "buzo",
-          "description": "color rojo",
-          "price": 225,
-          "thumbnail": "https://las_fotos.com/buzo.jpg",
-          "code": "b-r",
-          "stock": 32,
-          "id": 5
-      }
-  ]
+	{
+		"title": "zapato",
+		"description": "color negro",
+		"price": 25,
+		"thumbnail": "https://las_fotos.com/zapato.jpg",
+		"code": "z-n",
+		"stock": 10,
+		"category": "calzado",
+		"status": true,
+		"id": 1
+	},
+	{
+		"title": "pantalón",
+		"description": "color azul",
+		"price": 125,
+		"thumbnail": "https://las_fotos.com/pantalon.jpg",
+		"code": "p-a",
+		"stock": 23,
+		"category": "vestimenta",
+		"status": true,
+		"id": 2
+	},
+	{
+		"title": "remera",
+		"description": "color negro",
+		"price": 29,
+		"thumbnail": "https://las_fotos.com/remera.jpg",
+		"code": "r-n",
+		"stock": 8,
+		"category": "vestimenta",
+		"status": true,
+		"id": 3
+	},
+	{
+		"title": "camisa",
+		"description": "color azul",
+		"price": 95,
+		"thumbnail": "https://las_fotos.com/camisa.jpg",
+		"code": "c-a",
+		"stock": 56,
+		"category": "vestimenta",
+		"status": true,
+		"id": 4
+	},
+	{
+		"title": "buzo",
+		"description": "color rojo",
+		"price": 225,
+		"thumbnail": "https://las_fotos.com/buzo.jpg",
+		"code": "b-r",
+		"stock": 32,
+		"category": "vestimenta",
+		"status": true,
+		"id": 5
+	},
+	{
+		"title": "canguro",
+		"description": "color blanco-rojo",
+		"price": 44,
+		"thumbnail": "https://las_fotos.com/canguro.jpg",
+		"code": "c-b-r",
+		"stock": 18,
+		"category": "vestimenta",
+		"status": true,
+		"id": 6
+	},
+	{
+		"title": "botas",
+		"description": "color verde",
+		"price": 42,
+		"thumbnail": "https://las_fotos.com/botas.jpg",
+		"code": "b-v",
+		"stock": 3,
+		"category": "calzado",
+		"status": true,
+		"id": 7
+	}
+]

@@ -43,8 +43,21 @@ productsRouter.get("/:pid", async(req, res)=> {
     }        
 })
 
-productsRouter.post("/", (req,res) => {
-    res.status(200).send("listado de productos")
+productsRouter.post("/", async (req,res) => {
+    try{
+        let nuevo_producto = req.body
+        console.log("🚀 ~ productsRouter.post ~ nuevo_producto:", nuevo_producto)
+
+    
+        if (nuevo_producto) {
+            await productos.addProduct(nuevo_producto)
+            res.status(200).send("producto agregado")
+        }
+    } catch(e){
+        console.log(e)
+    }
+
+
 
 })
 
