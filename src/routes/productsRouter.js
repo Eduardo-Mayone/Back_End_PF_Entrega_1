@@ -75,7 +75,10 @@ productsRouter.put("/:pid", async (req,res) => {
 
 })
 
-productsRouter.delete("/:pid", async (req,res) => {
+// es correcto lo que estoy haciendo, estoy definiendo async para poder usar await
+// y esto está llamando a la función deleteProduct que es asíncrona
+
+productsRouter.delete("/:pid", async (req,res) => { 
     try{
         const id = parseInt(req.params.pid)
 
