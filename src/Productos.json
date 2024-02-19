@@ -13,7 +13,7 @@
 	{
 		"title": "pantalón",
 		"description": "color azul",
-		"price": 125,
+		"price": 42,
 		"thumbnail": "https://las_fotos.com/pantalon.jpg",
 		"code": "p-a",
 		"stock": 23,
@@ -55,17 +55,6 @@
 		"id": 5
 	},
 	{
-		"title": "canguro",
-		"description": "color blanco-rojo",
-		"price": 44,
-		"thumbnail": "https://las_fotos.com/canguro.jpg",
-		"code": "c-b-r",
-		"stock": 18,
-		"category": "vestimenta",
-		"status": true,
-		"id": 6
-	},
-	{
 		"title": "botas",
 		"description": "color verde",
 		"price": 42,
@@ -74,6 +63,17 @@
 		"stock": 3,
 		"category": "calzado",
 		"status": true,
-		"id": 7
+		"id": 8
+	},
+	{
+		"title": "canguro",
+		"description": "color blanco-rojo",
+		"price": 44,
+		"thumbnail": "https://las_fotos.com/canguro.jpg",
+		"code": "c-b-r",
+		"stock": 18,
+		"category": "vestimenta",
+		"status": true,
+		"id": 9
 	}
 ]

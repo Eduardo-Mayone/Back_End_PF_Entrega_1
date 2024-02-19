@@ -3,6 +3,7 @@ import fs from 'fs';
 
 export default class ProductManager {
     #url= "https://las_fotos.com/";
+    
     constructor(path) {
         this.path = path;
         console.log("Este es el path: ", this.path)
@@ -54,7 +55,6 @@ export default class ProductManager {
         const producto_buscado = productos.find ((producto) => producto.id === id);
         if (!producto_buscado) {
             console.log ("Product NOT FOUND");
-            throw (error);
         }
         else {
             console.log("Producto buscado por id: ", producto_buscado);
@@ -73,14 +73,16 @@ export default class ProductManager {
             }
             console.log("Con producto actualizado: ", productos);
             await fs.promises.writeFile(this.path, JSON.stringify(productos, null, "\t"));
+            console.log("Producto buscado por id: ", producto_buscado);
+            return producto_buscado; 
         }
         else {
             console.log ("Product NOT FOUND");
-            throw (error);
         }
     }
 
     async deleteProduct(id) {
+        let borrado = false
         const nuevo_array = [];
         const producto_buscado = await this.getProductById(id);
         if (producto_buscado) {
@@ -96,10 +98,14 @@ export default class ProductManager {
             }
             console.log("Con producto borrado: ", nuevo_array);
             await fs.promises.writeFile(this.path, JSON.stringify(nuevo_array, null, "\t"));
+            borrado = true
+                        
         }
         else {
             console.log ("Product NOT FOUND");
-            throw (error);
+            borrado = false
+            
         }
+        return borrado
     }
 }

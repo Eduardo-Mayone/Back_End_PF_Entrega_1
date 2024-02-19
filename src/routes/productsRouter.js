@@ -61,13 +61,33 @@ productsRouter.post("/", async (req,res) => {
 
 })
 
-productsRouter.put("/:pid", (req,res) => {
-    res.status(200).send("listado de productos")
+productsRouter.put("/:pid", async (req,res) => {
+    try{
+        const producto_a_actualizar = req.body 
+        producto_a_actualizar.id = parseInt(req.params.pid)
+        const producto_buscado = await productos.updateProduct(producto_a_actualizar)
+        if (producto_buscado) {
+            res.status(200).send("Producto actualizado correctamente")
+        }
+    } catch(e){
+        console.log(e)
+    }
 
 })
 
-productsRouter.delete("/:pid", (req,res) => {
-    res.status(200).send("listado de productos")
+productsRouter.delete("/:pid", async (req,res) => {
+    try{
+        const id = parseInt(req.params.pid)
+
+        if (await productos.deleteProduct(id)) {
+            res.status(200).send("Producto borrado correctamente")
+        } else {
+            res.status(501).send("Producto no encontrado")
+        }    
+       
+    } catch(e){
+        console.log(e)
+    }    
 
 })
 
