@@ -1,1 +1,15 @@
-[]
+[
+	{
+		"id_carrito": "b46e8cd0-c30c-4245-bebf-196fff12ef9f",
+		"productos_agregados": [
+			{
+				"id_producto": "1",
+				"quantity": 3
+			},
+			{
+				"id_producto": "2",
+				"quantity": 1
+			}
+		]
+	}
+]
