@@ -21,13 +21,13 @@ export default class CartManager {
         const carritos = await this.getCarritos();
         if (carritos) {
             const nuevoCarrito = { }
-            nuevoCarrito.id_Carrito = index
+            nuevoCarrito.id_carrito = index
             nuevoCarrito.productos_agregados = []
             carritos.push(nuevoCarrito)          
         } else {
             carritos = []
             const nuevoCarrito = { }
-            nuevoCarrito.id_Carrito = index
+            nuevoCarrito.id_carrito = index
             nuevoCarrito.productos_agregados = []
             carritos.push(nuevoCarrito)   
         }
@@ -55,56 +55,16 @@ export default class CartManager {
         }
     }
 
+    async getCarritoById(id) {
+        const carritos = await this.getCarritos();
+        const carrito_buscado = carritos.find ((carrito) => carrito.id === id);
+        if (!carrito_buscado) {
+            console.log ("Product NOT FOUND");
+        }
+        else {
+            console.log("Carrito buscado por id: ", carrito_buscado);
+            return carrito_buscado;  
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // async addProductAlCarrito(id_carrito,id_producto) {
-    //     const carritos = await this.getCarritos();
-    //     const carrito = carritos.find((carro)=> carro.id_carrito == id_carrito)
-    //     if (carrito) {
-    //         if (carrito.productos_agregados.find ((producto) => producto.id_producto == id_producto)) {
-    //             posicion = carrito.productos_agregados.findIndex ((producto) => producto.id_producto == id_producto)
-    //             carrito.productos_agregados[posicion].quantity += 1
-    //         }else {
-    //             const producto_a_agregar = {}
-    //             producto_a_agregar.id_producto = id_producto
-    //             producto_a_agregar.quantity = 1
-    //             carrito.productos_agregados.push(producto_a_agregar)
-    //         }
-    //         console.log("Producto agregado: ", carrito)
-    //         await fs.promises.writeFile(this.path, JSON.stringify(productos, null, "\t"));
-    //     } else {
-    //         console.log("Carrito no existe")
-    //     }
-    // }
-
-    
-    // async getProductById(id) {
-    //     const productos = await this.getProducts();
-    //     const producto_buscado = productos.find ((producto) => producto.id === id);
-    //     if (!producto_buscado) {
-    //         console.log ("Product NOT FOUND");
-    //     }
-    //     else {
-    //         console.log("Producto buscado por id: ", producto_buscado);
-    //         return producto_buscado;  
-    //     }
-    // }
 }
