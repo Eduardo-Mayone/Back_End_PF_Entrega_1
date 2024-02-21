@@ -1,32 +1,10 @@
 [
 	{
-		"id_carrito": "b46e8cd0-c30c-4245-bebf-196fff12ef9f",
+		"id_carrito": "fae366ea-322e-4271-a5ff-b3f0da789d8e",
 		"productos_agregados": [
 			{
-				"id_producto": "1",
-				"quantity": 4
-			},
-			{
-				"id_producto": "2",
-				"quantity": 1
-			}
-		]
-	},
-	{
-		"id_carrito": "c09bca7e-a38b-40f1-9089-70ef80fa94c3",
-		"productos_agregados": [
-			{
-				"id_producto": "3",
+				"id_producto": "22",
 				"quantity": 2
-			}
-		]
-	},
-	{
-		"id_carrito": "2183e30a-e7b2-4d27-9aad-43eefc02edd3",
-		"productos_agregados": [
-			{
-				"id_producto": "3",
-				"quantity": 1
 			}
 		]
 	}

@@ -48,7 +48,7 @@ export default class CartManager {
                 producto_a_agregar.quantity = 1
                 carritos[indice].productos_agregados.push(producto_a_agregar)
             }
-            console.log("Producto agregado: ", carritos)
+            //console.log("Producto agregado: ", carritos)
             await fs.promises.writeFile(this.path, JSON.stringify(carritos, null, "\t"));
         } else {
             console.log("Carrito no existe")
@@ -62,7 +62,7 @@ export default class CartManager {
             console.log ("Product NOT FOUND");
         }
         else {
-            console.log("Carrito buscado por id: ", carrito_buscado);
+            //console.log("Carrito buscado por id: ", carrito_buscado);
             return carrito_buscado;  
         }
     }

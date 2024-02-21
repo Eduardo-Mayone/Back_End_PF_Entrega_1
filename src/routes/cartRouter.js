@@ -2,10 +2,6 @@ import { Router } from "express";
 import CartManager from "../cartManager.js";
 const cartRouter = Router();
 const carritos = new CartManager("./src/Carrito.json")
-// cartRouter.get("/", (req,res) => {
-//     res.send("estoy en cart route")
-
-// })
 
 // crea carrito recibe body vacío
 cartRouter.post("/", async (req,res) => {
@@ -44,9 +40,5 @@ cartRouter.post("/:cid/product/:pid", async (req,res) => {
     }
      
 })
-
-
-
-
 
 export default cartRouter
